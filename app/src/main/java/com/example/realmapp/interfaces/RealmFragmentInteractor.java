@@ -1,22 +1,14 @@
-package com.example.realmapp.interactors;
+package com.example.realmapp.interfaces;
 
-import com.example.realmapp.realm.models.Materia;
-import com.example.realmapp.realm.models.Student;
-
-import java.util.List;
-
-public interface RealmFragmentPresenter {
-
-    /**
-     * Lo que enviamos al interactor
-     */
-    void requestAllStudents();
+public interface RealmFragmentInteractor {
 
     void saveStudent(String studentName, String studentEnrrolment, String career);
 
+    void getAllStudents();
+
     void deleteStudentByEnrrolment(String enrrolment);
 
-    void getOnlyCarlos();
+    void getOnlyCarlosStudents();
 
     void getStudentsWithIdGreaterThan20();
 
@@ -31,14 +23,5 @@ public interface RealmFragmentPresenter {
     void deleteSubjectByStudentEnrrolmentAndName(String enrrolment, String subjectName);
 
     void getAllSubjects();
-
-    /**
-     * Lo que enviamos al view
-     */
-    void setStudentsToView(List<Student> students);
-
-    void setMessageToView(String message);
-
-    void setSubjectsToView(List<Materia> materias);
 
 }

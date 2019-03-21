@@ -1,4 +1,4 @@
-package com.example.realmapp.interactors;
+package com.example.realmapp.interfaces;
 
 import com.example.realmapp.realm.models.Materia;
 import com.example.realmapp.realm.models.Student;
